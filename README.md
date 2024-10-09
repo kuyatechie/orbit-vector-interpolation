@@ -2,12 +2,12 @@
 A demo project to show timeseries database capabilities to interpolate missing orbital data
 
 ## methodology
-Interpolation is done using timescaleDB time bucket gapfill + interpolation method.
-The estimation method is done using linear average.
-Precision is automatically estimated depending on the given interpolation datetime and the threshold of the time bucket
+1. Interpolation is done using timescaleDB time bucket gapfill + interpolation method.
+2. The estimation method is done using linear average.
+3. Precision is automatically estimated depending on the given interpolation datetime and the threshold of the time bucket
 i.e. if the gap between the time bucket is < 30 mins then the precision is SECONDS, but if > 30 mins then the precision is per minute
-Django Rest Framework is used to serve web API.
-TimescaleDB + GIS is used to run hyperfunction queries.
+4. Django Rest Framework is used to serve web API.
+5. TimescaleDB + GIS is used to run hyperfunction queries. Details can be found on utils.py.
 
 ![alt text](image.png)
 
